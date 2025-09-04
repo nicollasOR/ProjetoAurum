@@ -1,0 +1,174 @@
+body
+{
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+}
+
+.tela-cadastro
+{
+    margin: 2vh 2vh 5vh 2vh;
+    background-color: var(--fundo);
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 20vh;
+    border-radius: 2vh;
+    padding: 1vh;
+}
+
+.textos-cadastro
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding: 1vh;
+    gap: 0.5vh;
+    margin-bottom: 2vh;
+}
+
+.logo
+{
+    width: 15vh;
+    margin-top: 2vh;
+    margin-right: 7vh;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.titulo
+{
+    color: var(--branco);
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.subtitulo
+{
+    color: var(--branco);
+    font-weight: 400;
+    margin-top: 0.5vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+input
+{
+    padding: 1.15vh;
+    border: 1px solid var(--borda);
+    border-radius: 1.5vh;
+    font-size: 1rem;
+    width: 90%;
+}
+
+label
+{
+    font-weight: 444;
+}
+
+placeholder
+{
+    margin-left: 1vh;
+}
+
+.cadastro-paineis
+{
+    height: 30vh;
+    margin: 5vh 5vh;
+}
+
+.paineis
+{
+    display: flex;
+    justify-content: space-between;
+
+
+    height: 40vh;
+}
+
+.painel-esquerdo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    height: 20vh;
+    margin-top: 10vh;
+}
+
+
+.painel-direito
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    height: 20vh;
+    margin-top: 10.555vh;
+    gap: 21px;
+}
+
+.texto-aviso
+{
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+
+.botoes
+{
+    display: grid;
+    height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    margin: 5vh;
+}
+
+.botao-cadastro
+{
+    background-color: var(--fundo);
+    color: var(--amarelo);
+    border: none;
+    border-radius: 1.5vh;
+    font-weight: 700;
+    font-size: 1.25rem;
+    width: 62.5vh;
+    padding: 1vh;
+
+}
+
+.botao-cadastro:hover
+{
+    cursor: pointer;
+    background-color: #24354D;
+    color: #FFD700;
+}
+
+.botao-voltar
+{
+    background-color: white;
+    text-decoration: underline;
+    color: var(--texto-escuro);
+    display: flex;
+    justify-content: center;
+    margin-top: -10vh;
+    font-weight: 650;
+}
+.botao-voltar:hover
+{
+    cursor: pointer;
+    color: var(--amarelo);
+}
+
+
+@media (max-width: 390px)
+{
+   .tela-cadastro{ margin: auto;}
+
+   .logo{width: 5vh;}
+}
