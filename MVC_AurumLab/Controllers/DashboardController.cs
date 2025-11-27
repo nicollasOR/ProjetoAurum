@@ -1,4 +1,5 @@
 using System.Security.Policy;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using MVC_AurumLab.Data;
@@ -18,7 +19,7 @@ namespace MVC_AurumLab.Controllers
             _contexto = contexto;
         }
 
-        public IActionResult Dashboard()
+        public IActionResult Dashboard() //Dashboard
         {
             if(HttpContext.Session.GetInt32("UsuarioId") == null)
             { // validade se existe um login realizado 
@@ -42,7 +43,7 @@ namespace MVC_AurumLab.Controllers
                 _contexto.TipoDispositivos, // JOIN TipoDispositivos)
                 dispositivo => dispositivo.IdTipoDispositivo, // dispositivo.IdTipoDispositivo
                 TipoDispositivo => TipoDispositivo.IdTipoDispositivo,
-                (dispositivo, tipoDispositivo => new{dispositivo, tipoDispositivo.Nome})
+                (dispositivo, tipoDispositivo) => new{dispositivo, tipoDispositivo.Nome}
                 //Para cada par encontrado - um dispositivo e seu tipoDispositivo correspondente - monta um objeto:
                 // dispositivo -> objeto completo
                 /*
@@ -54,18 +55,40 @@ namespace MVC_AurumLab.Controllers
                 } (exemplo)
                 
                 */
-                )
-            return View("Index");
+                ).GroupBy(item => item.Nome) // agrupa os dispositivos por nome
+                .Select(grupo => new ItemAgrupado // cria a lista de item agrupado para 
+                                                   // retornar somente nome e quantidade
+                {
+                Nome = grupo.Key, // key  = nome do tipo
+                Quantidade = grupo.Count() // Count() = retira quantidade de dispositivos daquele tipo
+                })
+                .ToList(); // executa a consulta no banco e transforma e m lista
+
+
+                // lista de locais
+
+                var locais = _contexto.LocalDispositivos
+                .OrderBy(local => local.Nome)
+                .ToList(); // buscar os locais cadastrados e ordernar pelo nome
+
+                // VIEW MODEL
+                // Cria a ViewModel com todas as informacoes que a pagina precisa
+                DashboardViewModel viewModel = new DashboardViewModel
+                {
+                    NomeUsuario = usuario?.NomeUsuario ?? "Usuario", // if(usuario != null) { NomeUsuario = usuario.NomeUsuario} 
+                                                                     // else{ return "Usuario" //!retorna o NomeUsuario como padrao}
+                    FotoUsuario = "/assets/img/img-perfil.png",
+                    totalDispositivos = _contexto.Dispositivos.Count(),
+                    totalAtivos = _contexto.Dispositivos.Count(dispositivos => dispositivos.SituacaoOperacional == "Operando"),
+                    totalManutencao = _contexto.Dispositivos.Count(dispositivos => dispositivos.SituacaoOperacional == "Em manutencao"),
+                    totalInoperantes = _contexto.Dispositivos.Count(dispositivos => dispositivos.SituacaoOperacional == "Inoperante"),
+
+                    DispositivosPorTipo = dispositivosTipo,
+                    Locais = locais
+                };
+
+            return View(viewModel);
+        
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

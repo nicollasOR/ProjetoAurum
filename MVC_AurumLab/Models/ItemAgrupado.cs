@@ -8,7 +8,7 @@ namespace MVC_AurumLab.Models
     public class ItemAgrupado : DashboardViewModel
     {
         public string Nome{get;set;}
-        public int Qunatidade {get;set;}
+        public int Quantidade {get;set;}
         
     }
 }

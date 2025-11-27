@@ -1,4 +1,4 @@
-@* @model MVC_AurumLab.Models.DashboardViewModel *@
+@model MVC_AurumLab.Models.DashboardViewModel
 @{
     Layout = null;
 }
@@ -10,8 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurum Lab - Dashboard</title>
 
-  <link rel="stylesheet" href="~/styles/dashboard.css">
-  <link rel="stylesheet" href="~/styles/global.css">
+  <link rel="stylesheet" href="~/css/dashboard.css">
+  <link rel="stylesheet" href="~/css/global.css">
 </head>
 
 <body>
@@ -55,9 +55,11 @@
           <span class="saudacao">Olá, @Model.NomeUsuario!</span>
 
           <img class="avatar"
+          @* Se o caminho estiver vazio, retorna a foto do usuario que esta no bacno *@
                src="@(string.IsNullOrEmpty(Model.FotoUsuario) 
-                        ? "/assets/img/img-perfil.png" 
+                        ? "~/assets/img/img-perfil.png" 
                         : Model.FotoUsuario)"
+                        @* o src poderia ser direto @Model.FotoUSuario *@
                alt="Foto do usuário">
         </div>
       </header>
@@ -71,7 +73,7 @@
         <article class="cartao-metrica">
           <header class="topo-metrica">
             <img class="icone" src="~/assets/icon/computer.svg">
-            <span class="valor-metrica numero">@Model.TotalDispositivos</span>
+            <span class="valor-metrica numero">@Model.totalDispositivos</span>
           </header>
           <h2 class="titulo-metrica">Total de Dispositivos</h2>
         </article>
@@ -79,7 +81,7 @@
         <article class="cartao-metrica">
           <header class="topo-metrica">
             <img class="icone" src="~/assets/icon/computer.svg">
-            <span class="valor-metrica numero">@Model.TotalAtivos</span>
+            <span class="valor-metrica numero">@Model.totalAtivos</span>
           </header>
           <h2 class="titulo-metrica">Dispositivos Ativos</h2>
         </article>
@@ -87,9 +89,9 @@
         <article class="cartao-metrica">
           <header class="topo-metrica">
             <img class="icone" src="~/assets/icon/computer.svg">
-            <span class="valor-metrica numero">@Model.TotalEmManutencao</span>
+            <span class="valor-metrica numero">@Model.totalManutencao</span>
           </header>
-          <h2 class="titulo-metrica">Dispositvos Em Manutenção</h2>
+          <h2 class="titulo-metrica">Dispositivos Em Manutenção</h2>
         </article>
 
       </section>
