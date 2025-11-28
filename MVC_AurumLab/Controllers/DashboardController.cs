@@ -76,8 +76,12 @@ namespace MVC_AurumLab.Controllers
                 DashboardViewModel viewModel = new DashboardViewModel
                 {
                     NomeUsuario = usuario?.NomeUsuario ?? "Usuario", // if(usuario != null) { NomeUsuario = usuario.NomeUsuario} 
-                                                                     // else{ return "Usuario" //!retorna o NomeUsuario como padrao}
-                    FotoUsuario = "/assets/img/img-perfil.png",
+
+                    // else{ return "Usuario" //!retorna o NomeUsuario como padrao}
+
+                    FotoUsuario = usuario?.Foto != null
+                                ? $"data:image/*;base64,{Convert.ToBase64String(usuario.Foto)}"
+                                : "/assets/img/img-perfil.png",
                     totalDispositivos = _contexto.Dispositivos.Count(),
                     totalAtivos = _contexto.Dispositivos.Count(dispositivos => dispositivos.SituacaoOperacional == "Operando"),
                     totalManutencao = _contexto.Dispositivos.Count(dispositivos => dispositivos.SituacaoOperacional == "Em manutencao"),

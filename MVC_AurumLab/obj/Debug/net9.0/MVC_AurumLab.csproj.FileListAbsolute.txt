@@ -610,7 +610,6 @@ C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\ywkhtni6up-jybjv5nqng.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\6ryskcryhx-e5ifeprl1w.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\oz0f6pqskn-61n19gt1b8.gz
-C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\ca2ph5z4vh-5ipweew5fc.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\370gtvzxex-3r8b2a0bt1.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\1crnsjg9q2-bqjiyaj88i.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\76xwl9k8rw-c2jlpeoesf.gz
@@ -682,3 +681,6 @@ C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\MVC_AurumLab.genruntimeconfig.cache
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\ref\MVC_AurumLab.dll
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\yp9h45tfl2-brzl8gycod.gz
+C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\atediiil7z-8jxm2w76o3.gz
+C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\ed0b16rwqj-vzqubb3vsn.gz
+C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\ca2ph5z4vh-78b2v3hwmg.gz
