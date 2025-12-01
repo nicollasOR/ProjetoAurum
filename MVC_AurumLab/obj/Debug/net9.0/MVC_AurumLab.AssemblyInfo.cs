@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC_AurumLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d270723525c0b58e219f19899abe411a60453ed2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fe70050b812b50acf0b89682189d3628e8d5472")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC_AurumLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC_AurumLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

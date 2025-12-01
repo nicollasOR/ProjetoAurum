@@ -23,6 +23,7 @@ public partial class Dispositivo
 
     public DateTime CriadoEm { get; set; }
 
+    //Objeto que possui relacionamento ocm esse dispositivo na tabela de foreign key
     public virtual LocalDispositivo IdLocalNavigation { get; set; } = null!;
 
     public virtual TipoDispositivo IdTipoDispositivoNavigation { get; set; } = null!;

@@ -684,3 +684,4 @@ C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\atediiil7z-8jxm2w76o3.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\ed0b16rwqj-vzqubb3vsn.gz
 C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\ca2ph5z4vh-78b2v3hwmg.gz
+C:\Users\54930515831\Videos\AurumLab\ProjetoAurum\MVC_AurumLab\obj\Debug\net9.0\compressed\jgonivp0y9-y5j4g5prrn.gz
