@@ -22,7 +22,7 @@ namespace MVC_AurumLab.Controllers
         //variavel?  == null (variavel comeca nulo)
         public IActionResult Index(string? busca = null, int? tipoId = null, int? localId = null)
         {
-            int? usuarioId = HttpContext.Session.GetInt32("UsuarioId");
+            int? usuarioId = HttpContext.Session.GetInt32("UsuárioId");
 
             if (usuarioId == null)
             {
@@ -62,12 +62,12 @@ namespace MVC_AurumLab.Controllers
 
             }
 
-            if (!tipoId.HasValue)
+            if (tipoId.HasValue)
         {
                 //verific se o id do tipo do select selecionado eh igual ao tipo cadastrado no banco para o dispositivo
                 selectBusca = selectBusca.Where(dispositivo => dispositivo.IdTipoDispositivo == tipoId.Value);
         }
-        if(!localId.HasValue)
+        if(localId.HasValue)
             {
                 selectBusca = selectBusca.Where(dispositivo => dispositivo.IdLocal == localId.Value);
             }
@@ -78,6 +78,9 @@ namespace MVC_AurumLab.Controllers
             FotoUsuario = usuario.Foto != null
             ? $"data:image/*;base64,{Convert.ToBase64String(usuario.Foto)}"
             :"/assets/img/img-perfil.png",
+
+            //Alguem esqueceu de puxar os dispositivos
+            Dispositivos = selectBusca.ToList(),
 
             //puxa os dispositivos de acorod com a model e mostra na tela de acordo com o selectBusca
             Tipos = _contexto.TipoDispositivos.ToList(),
@@ -105,7 +108,7 @@ namespace MVC_AurumLab.Controllers
         //mostrando a visualizacao
         public IActionResult Editar(int id)
         {
-            int? usuarioId = HttpContext.Session.GetInt32("UsuarioId");
+            int? usuarioId = HttpContext.Session.GetInt32("UsuárioId");
 
         if(usuarioId == null)
             {
@@ -140,7 +143,7 @@ namespace MVC_AurumLab.Controllers
         [HttpPost]
         public IActionResult Editar(EditarDispositivosViewModel vm)
         {
-            int? usuarioId = HttpContext.Session.GetInt32("UsuarioId");
+            int? usuarioId = HttpContext.Session.GetInt32("UsuárioId");
 
             if(usuarioId == null)
             {
@@ -155,7 +158,8 @@ namespace MVC_AurumLab.Controllers
             }
 
             dispositivo.Nome = vm.Nome;
-            dispositivo.IdTipoDispositivo = vm.IdDispositivo;
+            //Alguem esqueceu de colocar o tipoDispositivo ne?
+            dispositivo.IdTipoDispositivo = vm.IdTipoDispositivo;
             dispositivo.IdLocal = vm.IdLocal;
             dispositivo.DataUltimaManutencao = vm.DataUltimaManutencao;
 

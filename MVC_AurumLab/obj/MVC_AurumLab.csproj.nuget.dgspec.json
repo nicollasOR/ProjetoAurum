@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\54930515831\\Videos\\AurumLab\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj": {}
+    "C:\\Users\\Nicollas\\Desktop\\oi\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\54930515831\\Videos\\AurumLab\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj": {
+    "C:\\Users\\Nicollas\\Desktop\\oi\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\54930515831\\Videos\\AurumLab\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj",
+        "projectUniqueName": "C:\\Users\\Nicollas\\Desktop\\oi\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj",
         "projectName": "MVC_AurumLab",
-        "projectPath": "C:\\Users\\54930515831\\Videos\\AurumLab\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj",
-        "packagesPath": "C:\\Users\\54930515831\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\54930515831\\Videos\\AurumLab\\ProjetoAurum\\MVC_AurumLab\\obj\\",
+        "projectPath": "C:\\Users\\Nicollas\\Desktop\\oi\\ProjetoAurum\\MVC_AurumLab\\MVC_AurumLab.csproj",
+        "packagesPath": "C:\\Users\\Nicollas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicollas\\Desktop\\oi\\ProjetoAurum\\MVC_AurumLab\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\54930515831\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nicollas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
