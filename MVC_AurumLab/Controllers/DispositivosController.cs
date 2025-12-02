@@ -22,7 +22,7 @@ namespace MVC_AurumLab.Controllers
         //variavel?  == null (variavel comeca nulo)
         public IActionResult Index(string? busca = null, int? tipoId = null, int? localId = null)
         {
-            int? usuarioId = HttpContext.Session.GetInt32("UsuárioId");
+            int? usuarioId = HttpContext.Session.GetInt32("UsuarioId");
 
             if (usuarioId == null)
             {
@@ -108,7 +108,7 @@ namespace MVC_AurumLab.Controllers
         //mostrando a visualizacao
         public IActionResult Editar(int id)
         {
-            int? usuarioId = HttpContext.Session.GetInt32("UsuárioId");
+            int? usuarioId = HttpContext.Session.GetInt32("UsuarioId");
 
         if(usuarioId == null)
             {
@@ -143,7 +143,7 @@ namespace MVC_AurumLab.Controllers
         [HttpPost]
         public IActionResult Editar(EditarDispositivosViewModel vm)
         {
-            int? usuarioId = HttpContext.Session.GetInt32("UsuárioId");
+            int? usuarioId = HttpContext.Session.GetInt32("UsuarioId");
 
             if(usuarioId == null)
             {
